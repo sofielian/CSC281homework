@@ -55,9 +55,9 @@ public class Homework1 {
 
     System.out.println("===Problem 5===");
     // Uncomment to print the results of calling your min3 method with the following input:
-    //System.out.println(String.valueOf(hw1.min3(1.0, 2.0, 3.0)));
-    //System.out.println(String.valueOf(hw1.min3(4.0, 3.0, 2.0)));
-    //System.out.println(String.valueOf(hw1.min3(0.5, 0.1, 0.5)));
+   // System.out.println(String.valueOf(hw1.min3(1.0, 2.0, 3.0)));
+   // System.out.println(String.valueOf(hw1.min3(4.0, 3.0, 2.0)));
+   // System.out.println(String.valueOf(hw1.min3(0.5, 0.1, 0.5)));
     
     System.out.println("===Problem 6===");
     // Uncomment to print the results of calling your fibonacci method with the following input:
@@ -71,10 +71,10 @@ public class Homework1 {
     
     System.out.println("===Problem 7===");
     // Uncomment to print the results of calling your isPalindrome method with the following input:
-    // System.out.println(hw1.isPalinedrome("racecar"));
-    // System.out.println(hw1.isPalinedrome("cat"));
-    // System.out.println(hw1.isPalinedrome("hannah"));
-    // System.out.println(hw1.isPalinedrome("saippuakivikauppias"));
+    System.out.println(hw1.isPalinedrome("racecar"));
+    System.out.println(hw1.isPalinedrome("cat"));
+    System.out.println(hw1.isPalinedrome("hannah"));
+    System.out.println(hw1.isPalinedrome("saippuakivikauppias"));
   }
 
   /**
@@ -147,8 +147,9 @@ public class Homework1 {
    * Your method will be ran with the following input: 1.5 5.1 1.0 -4.2
    */
 
-	public int topInt(double d){	
-		int e = (int)d;
+	public int topInt(double d){
+		double r = Math.ceil(d);	
+		int e = (int)r;
 		return e;
 }
 
@@ -170,8 +171,7 @@ public class Homework1 {
    * Your method will be ran with the following input: '-' '4'
    */
     
-    
-        
+       
 
   /*
    * PROBLEM 4
@@ -237,5 +237,23 @@ public class Homework1 {
    * 
    * hint: build a string that is the reverse of the input
    */
+
+	public boolean isPalindrome(String s){
+		String reverseWord = "";
+	for (int x = s.length()-1; x!=-1; x--){
+		reverseWord += s.charAt(x);
+	}
+	if (reverseWord.equals(s)){
+		return true;
+	}
+	else {
+		return false;	
+	}
+	}
+
+
+
+
+
 }
 
