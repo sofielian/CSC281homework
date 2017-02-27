@@ -61,20 +61,20 @@ public class Homework1 {
     
     System.out.println("===Problem 6===");
     // Uncomment to print the results of calling your fibonacci method with the following input:
-    //System.out.println(hw1.fibonacci(0));
-    //System.out.println(hw1.fibonacci(1));
-    //System.out.println(hw1.fibonacci(2));
-    //System.out.println(hw1.fibonacci(3));
-    //System.out.println(hw1.fibonacci(10));
-    //System.out.println(hw1.fibonacci(25));
+    System.out.println(hw1.fibonacci(0));
+    System.out.println(hw1.fibonacci(1));
+    System.out.println(hw1.fibonacci(2));
+    System.out.println(hw1.fibonacci(3));
+    System.out.println(hw1.fibonacci(10));
+    System.out.println(hw1.fibonacci(25));
     
     
     System.out.println("===Problem 7===");
     // Uncomment to print the results of calling your isPalindrome method with the following input:
-    System.out.println(hw1.isPalinedrome("racecar"));
-    System.out.println(hw1.isPalinedrome("cat"));
-    System.out.println(hw1.isPalinedrome("hannah"));
-    System.out.println(hw1.isPalinedrome("saippuakivikauppias"));
+   // System.out.println(hw1.isPalinedrome("racecar"));
+   // System.out.println(hw1.isPalinedrome("cat"));
+   // System.out.println(hw1.isPalinedrome("hannah"));
+   // System.out.println(hw1.isPalinedrome("saippuakivikauppias"));
   }
 
   /**
@@ -99,10 +99,11 @@ public class Homework1 {
    */
 
 
-/* JAVADOC 
+  /* JAVADOC
+   
 
 
-*/
+  */
 
   public void problem1() {
 
@@ -217,6 +218,17 @@ public class Homework1 {
    *
    * Your method will be ran on following input: 0,1,2,3,10,25
    */
+  
+	  public static int fibonacci(int n) {
+       if (n == 0) {
+           return 0;
+       } else if (n == 1) {
+           return 1;
+       } else {
+           return fibonacci(n - 1) + fibonacci(n - 2);
+       }
+   }
+
    
   /* PROMBLEM 7
    * A palindrome is where a word or sentence is spelled the same
@@ -238,18 +250,18 @@ public class Homework1 {
    * hint: build a string that is the reverse of the input
    */
 
-	public boolean isPalindrome(String s){
-		String reverseWord = "";
-	for (int x = s.length()-1; x!=-1; x--){
-		reverseWord += s.charAt(x);
-	}
-	if (reverseWord.equals(s)){
-		return true;
-	}
-	else {
-		return false;	
-	}
-	}
+	//public boolean isPalindrome(String s){
+		//String reverse = "";
+	//for (int i = s.length()-1; i!=-1; i--){
+	//	reverse += s.charAt(i);
+	//}
+	//if (reverse.equals(s)){
+	//	return true;
+	//}
+	//else {
+	//	return false;	
+	//}
+	//}
 
 
 
