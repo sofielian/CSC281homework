@@ -71,10 +71,10 @@ public class Homework1 {
     
     System.out.println("===Problem 7===");
     // Uncomment to print the results of calling your isPalindrome method with the following input:
-    //System.out.println(hw1.isPalinedrome("racecar"));
-    //System.out.println(hw1.isPalinedrome("cat"));
-    //System.out.println(hw1.isPalinedrome("hannah"));
-    //System.out.println(hw1.isPalinedrome("saippuakivikauppias"));
+    System.out.println(hw1.isPalinedrome("racecar"));
+    System.out.println(hw1.isPalinedrome("cat"));
+    System.out.println(hw1.isPalinedrome("hannah"));
+    System.out.println(hw1.isPalinedrome("saippuakivikauppias"));
   }
 
   /**
@@ -261,5 +261,21 @@ public class Homework1 {
    * hint: build a string that is the reverse of the input
    */
 	
+	public boolean isPalinedrome(String s){
+
+		String reverseWord = " ";
+	for (int x = s.length()-1; x!=-1; x--){
+		reverseWord += s.charAt(x);
+	}
+	if (reverseWord.equals(s)){
+		return true;
+	}
+	else{
+		return false;
+	}		
+
+	}   
+
+
 
 }
