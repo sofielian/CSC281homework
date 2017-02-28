@@ -45,8 +45,8 @@ public class Homework1 {
 
     System.out.println("===Problem 3===");
     // Uncomment to print the results of calling your draw4x4 method with the following input:
-    // hw1.draw4x4('-');
-    // hw1.draw4x4('4');
+     hw1.draw4x4('-');
+     hw1.draw4x4('4');
 
     System.out.println("===Problem 4===");
     // Uncomment to print the results of calling your citationName method with the following input:
@@ -55,9 +55,9 @@ public class Homework1 {
 
     System.out.println("===Problem 5===");
     // Uncomment to print the results of calling your min3 method with the following input:
-   // System.out.println(String.valueOf(hw1.min3(1.0, 2.0, 3.0)));
-   // System.out.println(String.valueOf(hw1.min3(4.0, 3.0, 2.0)));
-   // System.out.println(String.valueOf(hw1.min3(0.5, 0.1, 0.5)));
+    System.out.println(String.valueOf(hw1.min3(1.0, 2.0, 3.0)));
+    System.out.println(String.valueOf(hw1.min3(4.0, 3.0, 2.0)));
+    System.out.println(String.valueOf(hw1.min3(0.5, 0.1, 0.5)));
     
     System.out.println("===Problem 6===");
     // Uncomment to print the results of calling your fibonacci method with the following input:
@@ -71,10 +71,10 @@ public class Homework1 {
     
     System.out.println("===Problem 7===");
     // Uncomment to print the results of calling your isPalindrome method with the following input:
-   // System.out.println(hw1.isPalinedrome("racecar"));
-   // System.out.println(hw1.isPalinedrome("cat"));
-   // System.out.println(hw1.isPalinedrome("hannah"));
-   // System.out.println(hw1.isPalinedrome("saippuakivikauppias"));
+    //System.out.println(hw1.isPalinedrome("racecar"));
+    //System.out.println(hw1.isPalinedrome("cat"));
+    //System.out.println(hw1.isPalinedrome("hannah"));
+    //System.out.println(hw1.isPalinedrome("saippuakivikauppias"));
   }
 
   /**
@@ -100,9 +100,7 @@ public class Homework1 {
 
 
   /* JAVADOC
-   
-
-
+  *Problem 1 is a problem that tests our ability to debug and point out problem   * existing in written code
   */
 
   public void problem1() {
@@ -155,6 +153,7 @@ public class Homework1 {
 }
 
 
+
   /*
    * PROBLEM 3
    * 
@@ -171,8 +170,16 @@ public class Homework1 {
    *
    * Your method will be ran with the following input: '-' '4'
    */
-    
-       
+ 
+	public void draw4x4(char box){
+	for(int i = 0; i < 4; i++){
+		if(i >= 1 && i <= 2){
+			System.out.println(box+ "  " + box);
+		} else {
+			System.out.println(box + "" + box + "" + box + "" + box);				}
+		}
+	}   
+  
 
   /*
    * PROBLEM 4
@@ -187,10 +194,8 @@ public class Homework1 {
    */
 	
 	public String citationName(String firstname, String lastname){
-		return (lastname + firstname.charAt(0) + ".");
-}// this is how i did it	
-
-
+		return (lastname + "," + " " + firstname.charAt(0) + ".");  //charAt(0) pin points the index of the character at that place in the word so 0 is the first letter and thats what we are targeting
+	}// this is how i did it				
 
 
   /*
@@ -202,6 +207,13 @@ public class Homework1 {
    * Print what your min3 method returns for the following triples of doubles as input: 1.0 2.0
    * 3.0, 4.0 3.0 2.0, 0.5 0.1 0.5
    */
+
+	
+ 	public double min3(double a, double b, double c){
+   		double minimum= Math.min(a,(Math.min(b,c))); // Math.min is used to find the minimum of a number with an imbedded formula Java already has available for us, tried Math.min(a,b,c) and it wouldn't take it concisely or elaborately seperated so this works
+    		return minimum; 
+  	}
+
 
 	
   /*
@@ -219,8 +231,8 @@ public class Homework1 {
    * Your method will be ran on following input: 0,1,2,3,10,25
    */
   
-	  public static int fibonacci(int n) {
-       if (n == 0) {
+       public static int fibonacci(int n){
+       if (n == 0) { //since 0 and 1 are numbers that aren't really changed in the fibbonacci, they stay the same, but any other number goes through the mathemeatical equation that is fibbonacci
            return 0;
        } else if (n == 1) {
            return 1;
@@ -228,7 +240,6 @@ public class Homework1 {
            return fibonacci(n - 1) + fibonacci(n - 2);
        }
    }
-
    
   /* PROMBLEM 7
    * A palindrome is where a word or sentence is spelled the same
@@ -249,23 +260,6 @@ public class Homework1 {
    * 
    * hint: build a string that is the reverse of the input
    */
-
-	//public boolean isPalindrome(String s){
-		//String reverse = "";
-	//for (int i = s.length()-1; i!=-1; i--){
-	//	reverse += s.charAt(i);
-	//}
-	//if (reverse.equals(s)){
-	//	return true;
-	//}
-	//else {
-	//	return false;	
-	//}
-	//}
-
-
-
-
+	
 
 }
-
