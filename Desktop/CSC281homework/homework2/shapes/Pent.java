@@ -72,7 +72,7 @@ public class Pent extends BasicShape {
      * Sets the internal or fill color of the polygon.
      */
     // create instance for for the fill color.
-    Color fillColor = new Color(0, 200, 135, 100);
+    Color fillColor = new Color(0, 200, 130, 100);
     // set the fill color to be the active color
     g2d.setColor(fillColor);
     // fill Polygon p with fillColor
