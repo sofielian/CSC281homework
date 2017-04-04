@@ -67,7 +67,7 @@ public class Triangle extends BasicShape {
      * Sets the internal or fill color of the polygon.
      */
     // create instance for for the fill color.
-    Color fillColor = new Color(200, 200, 255, 150);
+    Color fillColor = new Color(210, 200, 255, 150);
     // set the fill color to be the active color
     g2d.setColor(fillColor);
     // fill Polygon p with fillColor
